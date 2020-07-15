@@ -12,32 +12,31 @@ class Home extends StatelessWidget {
           title: Text('my first app'),
           centerTitle: true,
           backgroundColor: Colors.indigo),
-      body: Column(
+      body: Row(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text('hello'),
-              Text('world'),
-            ],
+          Expanded(child: Image.asset('assets/hardwood.jpg'), flex: 3),
+          Expanded(
+            flex: 1,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child: Text('1')),
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.amber,
-            child: Text('one'),
+          Expanded(
+            flex: 1,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.pinkAccent,
+                child: Text('2')),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.red[400],
-            child: Text('two'),
-          ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.green[400],
-            child: Text('three'),
+          Expanded(
+            flex: 1,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.amber,
+                child: Text('3')),
           ),
         ],
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
